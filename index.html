@@ -274,7 +274,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:.055em;line-hei
         <p data-i18n="bio_p3">Nada de pulsar play. Un directo que se toca, se dispara y se transforma en el momento — electrónica con manos, con error y con vida.</p>
       </div>
       <div>
-        <div class="bio-figure"><img id="bio-photo" alt="Gu Kchasu"></div>
+        <div class="bio-figure"><img id="bio-photo" loading="lazy" alt="Gu Kchasu"></div>
         <div class="facts">
           <div class="fact"><span data-i18n="fact_format">Formato</span><span data-i18n="fact_format_v">Dúo · directo</span></div>
           <div class="fact"><span data-i18n="fact_origin">Origen</span><span>Vigo, Galicia</span></div>
@@ -389,7 +389,7 @@ const pressOrder = ['p1','p2','p3','p4'];
 const pg = document.getElementById('press-grid');
 pressOrder.forEach(k=>{
   const fig=document.createElement('div');fig.className='pfig';
-  const im=document.createElement('img');im.src=IMGS[k];im.alt='Gu Kchasu';
+  const im=document.createElement('img');im.loading='lazy';im.src=IMGS[k];im.alt='Gu Kchasu';
   fig.appendChild(im);fig.addEventListener('click',()=>openLB(IMGS[k]));
   pg.appendChild(fig);
 });
